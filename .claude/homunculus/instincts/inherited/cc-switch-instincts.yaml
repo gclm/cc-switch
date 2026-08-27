@@ -1,0 +1,430 @@
+# Instincts generated from https://github.com/gclm/cc-switch
+# Generated: 2026-05-01T15:12:48.361Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: cc-switch-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix
+
+## Evidence
+
+- 4 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat(providers): add Baidu Qianfan Coding Plan for Claude Code (#2322), fix(claude): persist max effort via env (#2493)
+
+---
+id: cc-switch-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Commit Length
+
+## Action
+
+Write moderate-length commit messages (~51 characters)
+
+## Evidence
+
+- Average commit message length: 51 chars
+- Based on 4 commits
+
+---
+id: cc-switch-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: cc-switch-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: cc-switch-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: cc-switch-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: components, config, hooks, i18n
+
+---
+id: cc-switch-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: cc-switch-workflow-provider-feature-update
+trigger: "when doing provider feature update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Workflow Provider Feature Update
+
+## Action
+
+Follow the provider-feature-update workflow:
+1. Modify or add provider preset/configuration files in src/config or src/components/providers
+2. Update localization files in src/i18n/locales
+3. Update or add relevant documentation in docs/user-manual
+4. Update or add related tests in tests/components
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/config/claudeProviderPresets.ts, src/components/providers/forms/CommonConfigEditor.tsx, src/i18n/locales/en.json
+
+---
+id: cc-switch-workflow-tauri-backend-feature-or-fix
+trigger: "when doing tauri backend feature or fix"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/cc-switch
+---
+
+# Cc Switch Workflow Tauri Backend Feature Or Fix
+
+## Action
+
+Follow the tauri-backend-feature-or-fix workflow:
+1. Modify or add Rust source files in src-tauri/src
+2. Update Cargo.toml and Cargo.lock if dependencies or plugins are added
+3. Update related logic in src-tauri/src/lib.rs or other core files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src-tauri/src/services/stream_check.rs, src-tauri/src/proxy/gemini_url.rs, src-tauri/Cargo.toml
+
+---
+id: cc-switch-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Observed in src/components/providers/forms/CommonConfigEditor.tsx
+
+---
+id: cc-switch-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: cc-switch-instinct-class-naming
+trigger: "When defining a class or component"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Class Naming
+
+## Action
+
+Use PascalCase for class and component names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: cc-switch-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: cc-switch-instinct-import-alias
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Import Alias
+
+## Action
+
+Use import aliases as per project conventions
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: cc-switch-instinct-named-exports
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: cc-switch-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Test Location
+
+## Action
+
+Place tests in the separate 'tests' directory, mirroring the structure of the code being tested
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Example: tests/components/CommonConfigEditor.test.tsx
+
+---
+id: cc-switch-instinct-test-update-provider
+trigger: "When adding or updating provider-related features"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Test Update Provider
+
+## Action
+
+Add or update tests in tests/components for the affected provider components
+
+## Evidence
+
+- Workflow: provider-feature-update
+- Example: tests/components/CommonConfigEditor.test.tsx
+
+---
+id: cc-switch-instinct-git-commit-format
+trigger: "When writing a git commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Git Commit Format
+
+## Action
+
+Use the Conventional Commits format with 'feat' or 'fix' prefixes, a scope in parentheses if applicable, and a concise message
+
+## Evidence
+
+- Pattern in commits.type: conventional
+- Examples: 'feat(providers): add Baidu Qianfan Coding Plan for Claude Code (#2322)', 'fix(proxy): preserve Vertex AI full URLs (#2415)'
+
+---
+id: cc-switch-instinct-git-commit-length
+trigger: "When writing a git commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Git Commit Length
+
+## Action
+
+Keep the commit message around 50 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 51
+
+---
+id: cc-switch-instinct-provider-feature-update
+trigger: "When adding or updating a provider, preset, or configuration option"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Provider Feature Update
+
+## Action
+
+Modify/add provider config files in src/config or src/components/providers, update localization in src/i18n/locales, update docs in docs/user-manual, and update/add tests in tests/components
+
+## Evidence
+
+- Workflow: provider-feature-update
+- Example files: src/config/claudeProviderPresets.ts, src/i18n/locales/en.json, docs/user-manual/en/2-providers/2.1-add.md, tests/components/CommonConfigEditor.test.tsx
+
+---
+id: cc-switch-instinct-tauri-backend-feature-or-fix
+trigger: "When adding a new backend feature or fixing a bug in the Tauri (Rust) backend"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: gclm/cc-switch
+---
+
+# Cc Switch Instinct Tauri Backend Feature Or Fix
+
+## Action
+
+Modify/add Rust source files in src-tauri/src, update Cargo.toml and Cargo.lock if dependencies change, and update related logic in core files like src-tauri/src/lib.rs
+
+## Evidence
+
+- Workflow: tauri-backend-feature-or-fix
+- Example files: src-tauri/src/services/stream_check.rs, src-tauri/Cargo.toml, src-tauri/src/lib.rs
+
